@@ -1,0 +1,45 @@
+header .mainHeader nav .dropDownArrow{
+    position: relative;
+}
+header .container {
+    width: 100%;
+    max-width: 1380px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+header .mainHeader nav .dropDownArrow::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    border-bottom: solid 2px #fff;
+    transition: all 0.3s ease-in-out;
+}
+header .mainHeader nav .dropDownArrow::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 12px;
+    height: 8px;
+    background: url('../../public/images/icons/drop-down-arrow.svg') no-repeat;
+    background-size: cover;
+}
+header .mainHeader nav .dropDownArrow:hover::before {
+    width: 100%;
+}
+header .mainHeader nav .dropDownArrow.active::before {
+    width: 100%;
+}
+header .mainHeader nav .subMenu .subMenuLinks .rightArrow::after{
+    content: '';
+    position: absolute;
+    top: 60%;
+    right: 0;
+    width: 16px;
+    height: 10px;
+    background: url('../../public/images/icons/right-arrow-white.svg') no-repeat;
+    background-size: cover;
+    transform: translateY(-60%);
+}

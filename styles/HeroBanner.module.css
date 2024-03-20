@@ -1,0 +1,29 @@
+.heroBanner {
+	min-height: 1020px;
+}
+
+@media (min-width: 1025) and (max-width: 1366px) {
+	.heroBanner {
+		min-height: 800px;
+	}
+}
+@media (min-width: 991px) and (max-width: 1024px) {
+	.heroBanner {
+		min-height: 600px;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.heroBanner {
+		min-height: 450px;
+	}
+}
+@media (min-width: 596px) and (max-width: 767px) {
+	.heroBanner {
+		min-height: 400px;
+	}
+}
+@media (max-width: 595px) {
+	.heroBanner {
+		min-height: 300px;
+	}
+}
