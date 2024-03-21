@@ -3,14 +3,15 @@ header .mainHeader nav .dropDownArrow{
 }
 header .container {
     width: 100%;
-    max-width: 1380px;
+    /* max-width: 1380px; */
+    max-width: 1252px;
     padding: 0 20px;
     margin: 0 auto;
 }
 header .mainHeader nav .dropDownArrow::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    bottom: -15px;
     left: 0;
     width: 0;
     border-bottom: solid 2px #fff;
@@ -20,9 +21,11 @@ header .mainHeader nav .dropDownArrow::after{
     content: '';
     position: absolute;
     top: 50%;
-    right: 0;
+    right: -3px;
     width: 12px;
     height: 8px;
+    transform: rotate(0);
+    transition: all 0.3s ease-in-out;
     background: url('../../public/images/icons/drop-down-arrow.svg') no-repeat;
     background-size: cover;
 }
@@ -32,14 +35,46 @@ header .mainHeader nav .dropDownArrow:hover::before {
 header .mainHeader nav .dropDownArrow.active::before {
     width: 100%;
 }
+header .mainHeader nav .dropDownArrow.active::after {
+    transform: rotate(180deg);
+}
 header .mainHeader nav .subMenu .subMenuLinks .rightArrow::after{
     content: '';
     position: absolute;
-    top: 60%;
+    top: 65%;
     right: 0;
     width: 16px;
     height: 10px;
     background: url('../../public/images/icons/right-arrow-white.svg') no-repeat;
     background-size: cover;
-    transform: translateY(-60%);
+    transform: translateY(-65%);
 }
+header .mainHeader nav .subMenu::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 50px;
+  }
+  header .mainHeader nav .subMenu::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+  header .mainHeader nav .subMenu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  header .mainHeader nav .subMenu::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  header .mainHeader nav .subMenu .subMenuLinks .innerWrap::before{
+    content: '';
+    position: absolute;
+    top: 82px;
+    right: 0;
+    width: 22px;
+    height: 421px;
+    background: url('../../public/images/icons/mediaent.svg') no-repeat;
+    background-size: cover;
+  }

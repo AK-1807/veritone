@@ -1,3 +1,4 @@
+/* Default Button */
 .default {
 	cursor: pointer;
 	color: #212121;
@@ -20,7 +21,7 @@
 	background-color: transparent;
 }
 
-.primary {
+.btn-black {
 	color: #fff;
 	cursor: pointer;
 	background-color: #212121;
@@ -37,20 +38,50 @@
 	position: relative;
 }
 
-.primary.white{
-  color: #000;
-  background-color: #fff;
-  border: 0.25rem solid #fff;
-}
-.primary.white:hover {
-  color: #fff;
-}
-
-.primary:hover {
+.btn-black:hover {
 	color: #000;
 	background-color: transparent;
 }
 
+.btn-white {
+	color: #212121;
+	cursor: pointer;
+	background-color: #fff;
+	display: inline-block;
+	border-radius: 100px;
+	padding: 15px 28px 18px;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.1;
+	text-align: center;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+	border: 2.5px solid #fff;
+	position: relative;
+}
+
+.btn-white:hover {
+	color: #fff;
+	background-color: transparent;
+}  
+/* .primary.white{
+  color: #000;
+  background-color: #fff;
+  border: 0.25rem solid #fff;
+} */
+/* .primary.white:hover {
+  color: #fff;
+} */
+/* .primary.smallWhiteBtn {
+	color: #000;
+	background-color: #fff;
+	border: 0.25rem solid #fff;
+	padding: 8px 20px;
+    font-size: 16px;
+} */
+/* .primary.smallBlackBtn {
+	font-size: 20px;
+} */
 
 
 .transparent {
@@ -96,7 +127,7 @@
 	background-color: #fff;
 }
 
-.text-link {
+.text-link-black {
 	cursor: pointer;
 	color: #212121;
 	display: inline-block;
@@ -104,15 +135,15 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.65em;
-	padding-right: 2.6rem;
+	padding-right: 24px;
 	position: relative;
 }
 
-.text-link.small{
+/* .text-link.small{
 	padding-right: 1rem;
-  }
+  } */
 
-.text-link:after {
+.text-link-black:after {
 	content: '';
 	position: absolute;
 	bottom: 10px;
@@ -124,7 +155,7 @@
 	transition: right 0.3s ease-in-out;
 }
 
-.text-link.small::after{
+/* .text-link.small::after{
 	background: url('../../public//images/icons/Icon.svg');
 	width: 12px;
 	height: 8px;
@@ -133,9 +164,9 @@
 
   .text-link.small:hover::after{
     background:url('../../public/images/icons/icon-purple.svg')
-  }
+  } */
 
-.text-link:hover:after {
+.text-link-black:hover:after {
 	right: -0.5rem;
 }
 
@@ -147,7 +178,7 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.65em;
-	padding-right: 2.6rem;
+	padding-right: 24px;
 	position: relative;
 }
 

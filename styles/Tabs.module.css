@@ -1,7 +1,61 @@
 .tabs .innerContent {
-	width: calc(100% + 55px);
-  margin-left: -55px;
-	background: #FA524D;
+	width: calc(100% + 142px);
+    margin-left: -104px;
+}
+
+/* Scroll Css start */
+/* .tabs .container {
+	min-height: 300vh;
+} */
+.wrapper {
+	  position: sticky;
+	  min-height: 200px;
+    top: 130px;
+		z-index: 9;
+}
+
+/* .tabs .tab_outer {
+	height: 100vh;
+	position: sticky;
+	top: 0;
+} */
+.tabs  .tab_content{
+	min-height: auto;
+	padding-block: 0;
+	/* position: absolute;
+	top: 210px;   */
+	/* transition: top 500ms ease-in-out; */
+}
+.tabs  .tab_content.faded_out.down {
+	top: -25vh;
+}
+.tabs  .tab_content.faded_out {
+	top: 25vh;
+}
+/* Scroll Css end */
+
+.tabs .list h4::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+  background: #FA524D;
+	width: 0;
+	height: 4px;
+	border-radius: 5px;
+	transition: width 0.3s ease;
+}
+.tabs .list:nth-child(2) h4::after{
+	background: #875EF0;
+}
+.tabs .list:nth-child(3) h4::after{
+	background: #2AA29C;
+}
+.tabs .list:nth-child(4) h4::after{
+	background: #212121;
+}
+.tabs .list h4.active::after {
+	width: 100%;
 }
 .tabs .content {
 	width: calc(100% - 487px);
@@ -14,6 +68,9 @@
 }
 .tabs .content li {
 	color: #fff;
+}
+.tabs .col_seven {
+	width: calc(93.5% - 486px);
 }
 .tabs .imgOuter:after{
 	 content: '';
@@ -28,7 +85,7 @@
 	 z-index: 1;
 }
 
-.tabs .innerContent ul li {
+.tabs .innerContent ul li h6 {
 	font-family: Mundial;
 	font-size: 20px;
 	font-style: normal;
@@ -37,7 +94,42 @@
 	text-transform: uppercase;
 }
 
-@media (min-width: 1280px) {
+.tabs .innerContent ul li:not(:first-of-type){
+	padding-left: 44px;
+}
+
+.tabs .innerContent ul li:not(:first-of-type)::after{
+	content: '';
+	position: absolute;
+	left: 19px;
+	top: 0;
+	bottom: 0;
+  background: #fff;
+	width: 5px;
+	height: 5px;
+	border-radius: 100%;
+	margin: auto;
+}
+
+@media (min-width: 1025) and (max-width: 1366px) {
 	
+}
+@media (min-width: 991px) and (max-width: 1024px) {
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.tabs .innerContent ul li h6{
+		font-size: 18px;
+	}
+}
+@media (min-width: 596px) and (max-width: 767px) {
+	.tabs .innerContent ul li h6{
+		font-size: 16px;
+	}
+}
+@media (max-width: 595px) {
+	.tabs .innerContent ul li h6{
+		font-size: 16px;
+	}
 }
 

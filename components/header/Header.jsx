@@ -5,55 +5,700 @@ import Button from '../button/Button';
 
 export default function Header() {
 
+    const menuData = [
+        {
+            id: "1",
+            url: "/",
+            mainMenu: "AI solutions",
+            subMainMenu: 
+                {
+                    description: "AI solutions",
+                    subMenu: [
+                        {
+                            menu: "Media + Entertainment",
+                            // innerSubMenu: [ 
+                            //     {
+                            //         heading: "Media + Entertainment",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                            // ]
+                        },
+                        {
+                            menu: "Public Sector",
+                            // innerSubMenu: [ 
+                            //     {
+                            //         heading: "Public Sector",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        },
+                        {
+                            menu: "Hire",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Hire",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        },
+                        {
+                            menu: "Professional Services",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Professional Services",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        }
+                    ]
+                       
+                }
+        },
+        {
+            id: "2",
+            url: "/",
+            mainMenu: "AI software",
+            subMainMenu: 
+                {
+                    description: "AI software",
+                    subMenu: [
+                        {
+                            menu: "Media + Entertainment",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Media + Entertainment",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        },
+                        {
+                            menu: "Public Sector",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Public Sector",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        },
+                        {
+                            menu: "Hire",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Hire",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        },
+                        {
+                            menu: "Professional Services",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Professional Services",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        }
+                    ]
+                       
+                }
+        },
+        {
+            id: "3",
+            url: "/",
+            mainMenu: "Resources",
+            subMainMenu: 
+                {
+                    description: "Resources",
+                    subMenu: [
+                        {
+                            menu: "Media + Entertainment",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Media + Entertainment",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        },
+                        {
+                            menu: "Public Sector",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Public Sector",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        },
+                        {
+                            menu: "Hire",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Hire",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        },
+                        {
+                            menu: "Professional Services",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Professional Services",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        }
+                    ]   
+                }
+        },
+        {
+            id: "4",
+            url: "/",
+            mainMenu: "About",
+            subMainMenu: 
+                {
+                    description: "About",
+                    subMenu: [
+                        {
+                            menu: "Media + Entertainment",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Media + Entertainment",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                //     ]
+                                // }
+                                
+                            ]
+                        },
+                        {
+                            menu: "Public Sector",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Public Sector",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        },
+                        {
+                            menu: "Hire",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Hire",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        },
+                        {
+                            menu: "Professional Services",
+                            // innerSubMenu: [ 
+                            //     {
+                                    heading: "Professional Services",
+                                    innerDescription: "Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.",
+                                    btn1: "Explore all solutions",
+                                    btn1Class: "btn-black",
+                                    btn2: "Content licensing",
+                                    btn2Class: "transparent",
+                                    subMenuDescription: "SOLUTIONS FOR",
+                                    multiLink: [
+                                        {
+                                            link: "Broadcast"
+                                        },
+                                        {
+                                            link: "Film + studios"
+                                        },
+                                        {
+                                            link: "Sports"
+                                        },
+                                        {
+                                            link: "Streaming"
+                                        },
+                                        {
+                                            link: "Social media"
+                                        },
+                                        {
+                                            link: "Content creators"
+                                        },
+                                    ]
+                            //     }
+                                
+                            // ]
+                        }
+                    ]   
+                }
+        }
+    ]
+
+    // console.log(menuData);
 
   const [leftWidth, setLeftWidth] = useState('');
   const containerRef = useRef(null);
   const [headerHeight, setHeaderHeight] = useState(0);
+  const [asideHeaderWidth, setAsideHeaderWidth] = useState(0);
   const [activeMenu, setActiveMenu] = useState(0);
   const [activeSubMenu, setActiveSubMenu] = useState(0);
 
-  useEffect(() => {
+    useEffect(() => {
+        const headerElement = document.querySelector('header .mainHeader');
+        const asideHeaderElement = document.querySelector('header .mainHeader .subMenu');
+        const mainSections = document.querySelector('main');
+        if (containerRef.current) {
+            const containerRect = containerRef.current.getBoundingClientRect();
+            const viewportWidth = window.innerWidth;
+            const leftWidth = containerRect.left;
+            setLeftWidth(leftWidth)
+        }
    
-    if (containerRef.current) {
-        const containerRect = containerRef.current.getBoundingClientRect();
-        const viewportWidth = window.innerWidth;
-        const leftWidth = containerRect.left;
-        setLeftWidth(leftWidth)
+        if (headerElement) {
+            const height = headerElement.offsetHeight;
+            setHeaderHeight(height);
+        }
+
+    
+        if (asideHeaderElement) {
+            const aWidth = asideHeaderElement.offsetWidth; // Use offsetWidth to get the width
+            setAsideHeaderWidth(aWidth);
+        }
+
+        mainSections.addEventListener('click', function () {
+            setActiveMenu(0)
+            setActiveSubMenu(0)
+        })
+
+        window.addEventListener('resize', function () {
+            setActiveMenu(0)
+            setActiveSubMenu(0)
+        })
+
+    });
+
+    const subMenuProrperty = 
+        leftWidth == '' ?
+           { paddingLeft: `20px`,
+            top: `${headerHeight-1}px`,
+            height: `calc(100vh - ${headerHeight-1}px)`}
+         : {paddingLeft: `${leftWidth+20}px`,
+        top: `${headerHeight-1}px`,
+        height: `calc(100vh - ${headerHeight-1}px)` }
+
+    const asideMenuProperty = {
+        width: `calc(100% - ${asideHeaderWidth}px)`,
+        height: `calc(100vh - ${headerHeight-19}px)`,
+        top: `${headerHeight-1}px`
     }
-    const headerElement = document.querySelector('header .mainHeader');
-      if (headerElement) {
-        const height = headerElement.offsetHeight;
-        setHeaderHeight(height);
-      }
-  });
+    
+
 
   const showManu = (e, val) => {
     e.preventDefault()
-    console.log(val);
     if(activeMenu === val) {
         setActiveMenu(0)
+        setActiveSubMenu(0)
     } else {
         setActiveMenu(val)
         setActiveSubMenu(0)
     }
   }
 
+
+
  const showSubManu = (e, value) => {
     e.preventDefault()
-   console.log(value);
     if(activeSubMenu === value) {
         setActiveSubMenu(0);
-        console.log('test');
     } else {
         setActiveSubMenu(value);
-        console.log('test1');
     }
  }
   
 
   return (
    <header className=''>
-        <div className={`${Style.mainHeader} mainHeader bg-cosmos py-[30px] fixed z-[99] top-0 left-0 w-full`}>
+        <div className={`${Style.mainHeader} mainHeader bg-cosmos py-[20px] fixed z-[99] top-0 left-0 w-full`}>
             <div ref={containerRef} className={`${Style.container}`} >
                 <div className="row flex items-center justify-between">
                     <div className="logo relative">
@@ -79,150 +724,155 @@ export default function Header() {
                             </defs>
                         </svg>
                     </div>
-                    <nav className=''>
-                        <ul className='flex'>
-                            <li className={`mr-[50px]`}>
-                                <Link href="#" className={`arrow text-[20px] pr-[20px] relative text-white ${Style.dropDownArrow} ${activeMenu === 1 ? `${Style.active}` : ''} `} onClick={(e) => showManu(e, 1)}>AI solutions</Link>
-                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos max-w-[577px] h-[100vh] z-[9] pt-[60px] pr-[100px] ${activeMenu === 1 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ? { paddingLeft: `20px`, top: `${headerHeight}px` } : { paddingLeft: `${leftWidth}px`, top: `${headerHeight}px`  }}>
-                                    <div className="innerSubMenu h-[calc(100vh-280px)] flex flex-col justify-between">
-                                        <div className={`${Style.subMenuLinks} subMenuLinks `}>
+                    <nav className='max-w-[655px] w-full pb-[5px]'>
+                        <ul className='flex laptopsmall:justify-center'>
+                            <li className={`mr-[72px] laptopsmall:mr-[30px]`}>
+                                <Link href="#" className={`arrow text-[20px] pr-[18px] relative text-white ${Style.dropDownArrow} ${activeMenu === 1 ? `${Style.active}` : ''} `} onClick={(e) => showManu(e, 1)}>AI solutions</Link>
+                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos h-[100vh] z-[9] pt-[69px] pr-[110px] laptopsmall:pr-[50px] overflow-auto ${activeMenu === 1 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ?  subMenuProrperty  :  subMenuProrperty }>
+                                    <div className="innerSubMenu h-[calc(100vh-172px)] flex flex-col justify-between">
+                                        <div className={`${Style.subMenuLinks} subMenuLinks pl-[10px]`}>
                                             <h3 className='text-white'>AI solutions</h3>
-                                            <ul className='mt-[30px]'>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e, 1)}>Media + Entertainment</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu === 1 ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
-                                                        <div className="inroWrap">
+                                            <ul className='mt-[54px]'>
+                                                <div className={`bg-ember fixed top-[100px] right-0 overflow-auto ${activeSubMenu == 0 ? 'opacity-0 invisible' : 'opacity-1 visible'} `} style={ asideMenuProperty }></div>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`} onClick={(e) => showSubManu(e, 1)}>Media + Entertainment</Link>
+                                                    <div className={`${Style.innerWrap} innerWrap bg-ember fixed transition-all duration-700 ease-in-out right-0 pl-[122px] laptopsmall:pl-[50px] pt-[70px] overflow-auto ${activeSubMenu == 1 ? 'opacity-1 visible' : 'opacity-0 invisible'}`} style={ asideMenuProperty }>
+                                                        <div className="inroWrap max-w-[524px]">
                                                             <h3 className='text-white'>Media + Entertainment</h3>
-                                                            <div className="btnWrap mt-[23px]">
-                                                                <Button buttonText={'Explore'} url={'/'} buttonClass={'primary mr-[30px]'} />
+                                                            <p className='text-white text-[20px] max-w-[474px] mt-[14px] pl-[4px]'>Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.</p>
+                                                            <div className="btnWrap mt-[22px] flex">
+                                                                <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'btn-black mr-[25px]'} />
+                                                                <Button buttonText={'Content licensing'} url={'/'} buttonClass={'transparent !text-[20px] mr-[30px]'} />
                                                             </div>
                                                         </div>
-                                                        <div className="innerMenu mt-[90px]">
-                                                            <h6 className='text-[20px] text-white mb-[32px]'>Solutions for</h6>
+                                                        <div className="innerMenu mt-[135px] pl-[5px]">
+                                                            <h6 className='text-[20px] text-white mb-[32px] font-[600] uppercase'>Solutions for</h6>
                                                             <ul>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Media management</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Broadcast</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Monetization</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Film + studios</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Content creation & distribution</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Sports</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Streaming</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Social media</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Recruitment</Link>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Content creators</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e, 2)}>Public Sector</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu === 2 ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
-                                                        <div className="inroWrap">
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`} onClick={(e) => showSubManu(e, 2)}>Public Sector</Link>
+                                                    <div className={`${Style.innerWrap} innerWrap bg-ember fixed transition-all duration-700 ease-in-out right-0 pl-[122px] laptopsmall:pl-[50px] pt-[70px] overflow-auto ${activeSubMenu == 2 ? 'opacity-1 visible' : 'opacity-0 invisible'}`} style={ asideMenuProperty }>
+                                                        <div className="inroWrap max-w-[524px]">
                                                             <h3 className='text-white'>Public Sector</h3>
-                                                            <div className="btnWrap mt-[23px]">
-                                                                <Button buttonText={'Explore'} url={'/'} buttonClass={'primary mr-[30px]'} />
+                                                            <p className='text-white text-[20px] max-w-[474px] mt-[14px] pl-[4px]'>Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.</p>
+                                                            <div className="btnWrap mt-[22px] flex">
+                                                                <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'btn-black mr-[25px]'} />
+                                                                <Button buttonText={'Content licensing'} url={'/'} buttonClass={'transparent !text-[20px] mr-[30px]'} />
                                                             </div>
                                                         </div>
-                                                        <div className="innerMenu mt-[90px]">
-                                                            <h6 className='text-[20px] text-white mb-[32px]'>Solutions for</h6>
+                                                        <div className="innerMenu mt-[135px] pl-[5px]">
+                                                            <h6 className='text-[20px] text-white mb-[32px] font-[600] uppercase'>Solutions for</h6>
                                                             <ul>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Media management</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Broadcast</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Monetization</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Film + studios</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Content creation & distribution</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Sports</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Streaming</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Social media</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Recruitment</Link>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Content creators</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e, 3)}>Talent Acquisition</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu === 3 ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
-                                                        <div className="inroWrap">
-                                                            <h3 className='text-white'>Talent Acquisition</h3>
-                                                            <div className="btnWrap mt-[23px]">
-                                                                <Button buttonText={'Explore'} url={'/'} buttonClass={'primary mr-[30px]'} />
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`} onClick={(e) => showSubManu(e, 3)}>Hire</Link>
+                                                    <div className={`${Style.innerWrap} innerWrap bg-ember fixed transition-all duration-700 ease-in-out right-0 pl-[122px] laptopsmall:pl-[50px] pt-[70px] overflow-auto ${activeSubMenu == 3 ? 'opacity-1 visible' : 'opacity-0 invisible'}`} style={ asideMenuProperty }>
+                                                        <div className="inroWrap max-w-[524px]">
+                                                            <h3 className='text-white'>Hire</h3>
+                                                            <p className='text-white text-[20px] max-w-[474px] mt-[14px] pl-[4px]'>Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.</p>
+                                                            <div className="btnWrap mt-[22px] flex">
+                                                                <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'btn-black mr-[25px]'} />
+                                                                <Button buttonText={'Content licensing'} url={'/'} buttonClass={'transparent !text-[20px] mr-[30px]'} />
                                                             </div>
                                                         </div>
-                                                        <div className="innerMenu mt-[90px]">
-                                                            <h6 className='text-[20px] text-white mb-[32px]'>Solutions for</h6>
+                                                        <div className="innerMenu mt-[135px] pl-[5px]">
+                                                            <h6 className='text-[20px] text-white mb-[32px] font-[600] uppercase'>Solutions for</h6>
                                                             <ul>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Media management</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Broadcast</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Monetization</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Film + studios</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Content creation & distribution</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Sports</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Streaming</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Social media</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Recruitment</Link>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Content creators</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e, 4)}>Consulting Services</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu === 4 ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
-                                                        <div className="inroWrap">
-                                                            <h3 className='text-white'>Consulting Services</h3>
-                                                            <div className="btnWrap mt-[23px]">
-                                                                <Button buttonText={'Explore'} url={'/'} buttonClass={'primary mr-[30px]'} />
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`} onClick={(e) => showSubManu(e, 4)}>Professional Services</Link>
+                                                    <div className={`${Style.innerWrap} innerWrap bg-ember fixed transition-all duration-700 ease-in-out right-0 pl-[122px] laptopsmall:pl-[50px] pt-[70px] overflow-auto ${activeSubMenu == 4 ? 'opacity-1 visible' : 'opacity-0 invisible'}`} style={ asideMenuProperty }>
+                                                        <div className="inroWrap max-w-[524px]">
+                                                            <h3 className='text-white'>Professional Services</h3>
+                                                            <p className='text-white text-[20px] max-w-[474px] mt-[14px] pl-[4px]'>Subhead lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar ligula quis pulvinar placerat um nisi, et.</p>
+                                                            <div className="btnWrap mt-[22px] flex">
+                                                                <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'btn-black mr-[25px]'} />
+                                                                <Button buttonText={'Content licensing'} url={'/'} buttonClass={'transparent !text-[20px] mr-[30px]'} />
                                                             </div>
                                                         </div>
-                                                        <div className="innerMenu mt-[90px]">
-                                                            <h6 className='text-[20px] text-white mb-[32px]'>Solutions for</h6>
+                                                        <div className="innerMenu mt-[135px] pl-[5px]">
+                                                            <h6 className='text-[20px] text-white mb-[32px] font-[600] uppercase'>Solutions for</h6>
                                                             <ul>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Media management</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Broadcast</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Monetization</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Film + studios</Link>
                                                                 </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Content creation & distribution</Link>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Sports</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Streaming</Link>
+                                                                </li>
+                                                                <li className='mb-[32px]'>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Social media</Link>
                                                                 </li>
                                                                 <li>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Recruitment</Link>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e, 5)}>Managed Services</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu === 5 ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
-                                                        <div className="inroWrap">
-                                                            <h3 className='text-white'>Managed Services</h3>
-                                                            <div className="btnWrap mt-[23px]">
-                                                                <Button buttonText={'Explore'} url={'/'} buttonClass={'primary mr-[30px]'} />
-                                                            </div>
-                                                        </div>
-                                                        <div className="innerMenu mt-[90px]">
-                                                            <h6 className='text-[20px] text-white mb-[32px]'>Solutions for</h6>
-                                                            <ul>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Media management</Link>
-                                                                </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Monetization</Link>
-                                                                </li>
-                                                                <li className='mb-[40px]'>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Content creation & distribution</Link>
-                                                                </li>
-                                                                <li>
-                                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px]`}>Recruitment</Link>
+                                                                    <Link href="#" className={`text-white text-[20px] ${Style.rightArrow} relative pr-[22px]`}>Content creators</Link>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -231,21 +881,21 @@ export default function Header() {
                                             </ul>
                                         </div>
                                         <div className="btnWrap">
-                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default mr-[30px]'} />
+                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default smallDefaultBtn mr-[30px]'} />
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li className={`mr-[50px] `}>
-                                <Link href="#" className={`arrow text-[20px] pr-[20px] relative text-white ${Style.dropDownArrow} ${activeMenu === 2 ? `${Style.active}` : ''} `} onClick={(e) => showManu(e, 2)}>AI software</Link>
-                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos max-w-[577px] h-[100vh] z-[9] pt-[60px] pr-[100px] ${activeMenu === 2 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ? { paddingLeft: `20px`, top: `${headerHeight}px` } : { paddingLeft: `${leftWidth}px`, top: `${headerHeight}px`  }}>
-                                    <div className="innerSubMenu h-[calc(100vh-280px)] flex flex-col justify-between">
-                                        <div className={`${Style.subMenuLinks} subMenuLinks `}>
+                            <li className={`mr-[72px] laptopsmall:mr-[30px]`}>
+                                <Link href="#" className={`arrow text-[20px] pr-[18px] relative text-white ${Style.dropDownArrow} ${activeMenu === 2 ? `${Style.active}` : ''} `} onClick={(e) => showManu(e, 2)}>AI software</Link>
+                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos h-[100vh] z-[9] pt-[69px] pr-[100px] laptopsmall:pr-[50px] overflow-auto ${activeMenu === 2 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ?  subMenuProrperty  :  subMenuProrperty }>
+                                    <div className="innerSubMenu h-[calc(100vh-172px)] flex flex-col justify-between">
+                                        <div className={`${Style.subMenuLinks} subMenuLinks pl-[10px]`}>
                                             <h3 className='text-white'>AI software</h3>
-                                            <ul className='mt-[30px]'>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e)}>Media + Entertainment</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
+                                            <ul className='mt-[54px]'>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[22px]`}>Media + Entertainment</Link>
+                                                    {/* <div className={`innerWrap bg-ember fixed top-[100px] ion-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
                                                         <div className="inroWrap">
                                                             <h3 className='text-white'>Media + Entertainment</h3>
                                                             <div className="btnWrap mt-[23px]">
@@ -269,38 +919,35 @@ export default function Header() {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Public Sector</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Public Sector</Link>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Talent Acquisition</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Hire</Link>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Consulting Services</Link>
-                                                </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Managed Services</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Professional Services</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="btnWrap">
-                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default mr-[30px]'} />
+                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default smallDefaultBtn mr-[30px]'} />
                                         </div>
                                     </div>
                                 </div>
                             </li>
-                            <li className={`mr-[50px]`}>
-                                <Link href="#" className={`arrow text-[20px] pr-[20px] relative text-white ${Style.dropDownArrow} ${activeMenu === 3 ? `${Style.active}` : ''}`} onClick={(e) => showManu(e, 3)}>Resources</Link>
-                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos max-w-[577px] h-[100vh] z-[9] pt-[60px] pr-[100px] ${activeMenu === 3 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ? { paddingLeft: `20px`, top: `${headerHeight}px` } : { paddingLeft: `${leftWidth}px`, top: `${headerHeight}px`  }}>
-                                    <div className="innerSubMenu h-[calc(100vh-280px)] flex flex-col justify-between">
-                                        <div className={`${Style.subMenuLinks} subMenuLinks `}>
+                            <li className={`mr-[72px] laptopsmall:mr-[30px]`}>
+                                <Link href="#" className={`arrow text-[20px] pr-[18px] relative text-white ${Style.dropDownArrow} ${activeMenu === 3 ? `${Style.active}` : ''}`} onClick={(e) => showManu(e, 3)}>Resources</Link>
+                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos h-[100vh] z-[9] pt-[69px] pr-[100px] laptopsmall:pr-[50px] overflow-auto ${activeMenu === 3 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ?  subMenuProrperty  :  subMenuProrperty }>
+                                    <div className="innerSubMenu h-[calc(100vh-172px)] flex flex-col justify-between">
+                                        <div className={`${Style.subMenuLinks} subMenuLinks pl-[10px]`}>
                                             <h3 className='text-white'>Resources</h3>
-                                            <ul className='mt-[30px]'>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e)}>Media + Entertainment</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
+                                            <ul className='mt-[54px]'>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`} onClick={(e) => showSubManu(e)}>Media + Entertainment</Link>
+                                                    {/* <div className={`innerWrap bg-ember fixed top-[100px] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
                                                         <div className="inroWrap">
                                                             <h3 className='text-white'>Media + Entertainment</h3>
                                                             <div className="btnWrap mt-[23px]">
@@ -324,38 +971,35 @@ export default function Header() {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Public Sector</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Public Sector</Link>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Talent Acquisition</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Hire</Link>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Consulting Services</Link>
-                                                </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Managed Services</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Professional Services</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="btnWrap">
-                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default mr-[30px]'} />
+                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default smallDefaultBtn mr-[30px]'} />
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li className={``}>
-                                <Link href="#" className={`arrow text-[20px] pr-[20px] relative text-white ${Style.dropDownArrow} ${activeMenu === 4 ? `${Style.active}` : ''}`} onClick={(e) => showManu(e, 4)}>About</Link>
-                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos max-w-[577px] h-[100vh] z-[9] pt-[60px] pr-[100px] ${activeMenu === 4 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ? { paddingLeft: `20px`, top: `${headerHeight}px` } : { paddingLeft: `${leftWidth}px`, top: `${headerHeight}px`  }}>
-                                    <div className="innerSubMenu h-[calc(100vh-280px)] flex flex-col justify-between">
-                                        <div className={`${Style.subMenuLinks} subMenuLinks `}>
+                                <Link href="#" className={`arrow text-[20px] pr-[18px] relative text-white ${Style.dropDownArrow} ${activeMenu === 4 ? `${Style.active}` : ''}`} onClick={(e) => showManu(e, 4)}>About</Link>
+                                <div className={`${Style.subMenu} subMenu absolute transition-all duration-700 ease-in-out bg-cosmos h-[100vh] z-[9] pt-[69px] pr-[100px] laptopsmall:pr-[50px] overflow-auto ${activeMenu === 4 ? `left-0` : 'left-[-100%]'} `} style={leftWidth == '' ?  subMenuProrperty  :  subMenuProrperty }>
+                                    <div className="innerSubMenu h-[calc(100vh-172px)] flex flex-col justify-between">
+                                        <div className={`${Style.subMenuLinks} subMenuLinks pl-[10px]`}>
                                             <h3 className='text-white'>About</h3>
-                                            <ul className='mt-[30px]'>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`} onClick={(e) => showSubManu(e)}>Media + Entertainment</Link>
-                                                    <div className={`innerWrap bg-ember fixed top-[100px] w-[calc(100%-400px)] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
+                                            <ul className='mt-[54px]'>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`} onClick={(e) => showSubManu(e)}>Media + Entertainment</Link>
+                                                    {/* <div className={`innerWrap bg-ember fixed top-[100px] transition-all duration-700 ease-in-out right-0 h-full pl-[123px] pt-[74px] ${activeSubMenu ? 'opacity-1 visible' : 'opacity-0 invisible'}`}>
                                                         <div className="inroWrap">
                                                             <h3 className='text-white'>Media + Entertainment</h3>
                                                             <div className="btnWrap mt-[23px]">
@@ -379,39 +1023,36 @@ export default function Header() {
                                                                 </li>
                                                             </ul>
                                                         </div>
-                                                    </div>
+                                                    </div> */}
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Public Sector</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Public Sector</Link>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Talent Acquisition</Link>
+                                                   <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Hire</Link>
                                                 </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Consulting Services</Link>
-                                                </li>
-                                                <li className='mb-[30px]'>
-                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[30px] text-[22px]`}>Managed Services</Link>
+                                                <li className='mb-[32px]'>
+                                                    <Link href="#" className={`text-white ${Style.rightArrow} relative pr-[22px] text-[20px]`}>Professional Services</Link>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className="btnWrap">
-                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default mr-[30px]'} />
+                                            <Button buttonText={'Explore all solutions'} url={'/'} buttonClass={'default smallDefaultBtn mr-[30px]'} />
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </nav>
-                    <div className="btnOuter flex items-center">
-                        <div className="searchWrap mr-[20px]">
+                    <div className="btnOuter flex items-center w-full justify-end max-w-fit">
+                        <div className="searchWrap mr-[22px]">
                             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M16 16L13.0834 13.0833M15.1667 8.08333C15.1667 11.9954 11.9954 15.1667 8.08333 15.1667C4.17132 15.1667 1 11.9954 1 8.08333C1 4.17132 4.17132 1 8.08333 1C11.9954 1 15.1667 4.17132 15.1667 8.08333Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                             </svg>
                         </div>
                         <Link href="#" className='text-white text-[20px]'>Sign in</Link>
-                        <div className="btnWrap ml-[20px]">
-                            <Button buttonText={'Get started'} url={'/'} buttonClass={'primary white mr-[30px] !pb-[14px] !pt-[12px]'} />
+                        <div className="btnWrap ml-[32px]">
+                            <Button buttonText={'Get started'} url={'/'} buttonClass={'btn-white smallWhiteBtn '} />
                         </div>
                     </div>
                 </div>

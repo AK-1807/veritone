@@ -7,11 +7,12 @@ export default function Layout({ children }) {
 
 
 	return (
-			<main className="mb-auto">
-				<Header/>
-				{children}
-				<Footer/>
-			</main>
-			
+		<>
+			<Header/>
+				<main className="mb-auto">
+					{children}
+				</main>
+			<Footer/>
+		</>
 	);
 }
