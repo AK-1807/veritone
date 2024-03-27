@@ -1,5 +1,5 @@
 import Button from './button/Button';
-
+import Image from 'next/image';
 const ColTwoGrid = ({ col }) => {
 	return (
 		<section className="col-two-grid">
@@ -9,11 +9,12 @@ const ColTwoGrid = ({ col }) => {
 						return (
 							<div key={i} className="col-two">
 								<div className="icon-wrap ">
-									<img
+									<Image
 										src={item.imgpath}
 										alt={item.alt}
 										width={42}
 										height={42}
+										quality={75}
 									/>
 								</div>
 								<h2 className="pt-5">{item.colTitle}</h2>

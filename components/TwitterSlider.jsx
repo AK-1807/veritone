@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 import Button from "./button/Button";
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -16,13 +17,14 @@ const ImageTextCarousel = ({
     comments,
     refresh,
     likes,
-    share
+    share,
+    categories,
+    index
 }) => {
-
     return (
         <div className={`sliderCard mx-[20px] sm:max-w-[360px]`}>
-            <a className='emptyLink' href={url}>.</a>
-            <div className="imageWrap max-w-[360px] max-h-[340px] w-full h-full overflow-hidden">
+            <Link className='emptyLink' href={url}>.</Link>
+            <div className="imageWrap max-w-[360px] xxl-up:max-w-[600px] max-h-[340px] w-full h-full overflow-hidden">
                 <Image
                     src={imageSrc}
                     width={2000}
@@ -47,7 +49,7 @@ const ImageTextCarousel = ({
                         <span className='text-[16px] block text-cosmos'>{userName}</span>
                     </div>
                 </div>
-                <p className='text-cosmos small'>{desc}</p>
+                <p className='text-cosmos small'>{index } , {desc}</p>
             </div>
             <div className="postDetailWrap flex mt-[35px]">
                 <div className="comments flex items-center mr-[39px]">
@@ -103,9 +105,14 @@ const ImageTextCarousel = ({
 };
 
 export default function TwitterSlider({ data, onlyInternalPosts }) {
-    // console.log(onlyInternalPosts);
-    const totalSlides = data?.length;
+    // let SlidesData;
+    const [slidesData, setSlidesData] = useState(data)
+    const [totalSlides, setTotalSlides] = useState(data.length)
+    const [checked, setChecked] = useState(true)
+   // let filteredItems;
     const sliderRef = useRef(null);
+
+    // console.log(sliderRef.current)
     const settings = {
         dots: false,
         infinite: true,
@@ -119,6 +126,18 @@ export default function TwitterSlider({ data, onlyInternalPosts }) {
         swipe: true,
         touchThreshold: 100,
     };
+    useState(() => {
+        if (onlyInternalPosts === true) {
+            let filteredItems = data.filter(item => item.categories.includes("veritone"));
+            setSlidesData(filteredItems)
+        }
+    }, [])
+    useEffect(() => {
+        setTotalSlides(slidesData?.length)
+    },[slidesData])
+    // const totalSlides = SlidesData?.length;
+    // console.log(totalSlides);
+    // console.log(SlidesData);
 
     const responsiveSettings = [
         {
@@ -133,42 +152,44 @@ export default function TwitterSlider({ data, onlyInternalPosts }) {
                 slidesToShow: 1.65,
             },
         },
-        // {
-        //     breakpoint: 767,
-        //     settings: {
-        //         slidesToShow: 4,
-        //     },
-        // },
         {
             breakpoint: 595,
             settings: {
-                // autoplay: false,
                 slidesToShow: 0.98,
                 centerMode: false,
             },
         },
-        // {
-        //     breakpoint: 460,
-        //     settings: {
-        //         slidesToShow: 2,
-        //     },
-        // },
     ];
 
     Object.assign(settings, { responsive: responsiveSettings });
+
+
+    const changeHandler = (e) => {
+        setChecked(false)
+        if (e.target.checked) {
+            let filteredItems = data.filter(item => item.categories.includes("veritone"));
+            setSlidesData(filteredItems)
+        } else { 
+        setSlidesData(data)
+        }
+        setTimeout(() => {
+            setChecked(true)
+        },300)
+        
+    }
     return (
         <section className="testimonialSlider overflow-hidden">
-            <div className={`max-w-[1550px] px-[20px] mx-auto`}>
+            <div className={` px-[20px] mx-auto`}>
                 <div className="intro flex items-end justify-between mb-[42px] ipad:flex-wrap">
                     <div className="titleWrap w-[30%]">
                         <h2 className="h1 pb-[10px]">
                             Latest updates
                         </h2>
                     </div>
-                    <div className="btnWrapper w-[50%] flex justify-end items-center ipad:w-full ipad:justify-start">
+                    <div ref={sliderRef} className="btnWrapper w-[50%] flex justify-end items-center ipad:w-full ipad:justify-start">
                         <div className="checkBoxWithText flex items-center">
                             <div className={`checkboxSwitch`}>
-                                <input defaultChecked={onlyInternalPosts} type="checkbox" />
+                                <input defaultChecked={onlyInternalPosts} type="checkbox" onChange={(e)=>changeHandler(e)}/>
                             </div>
                             <p className='ml-[20px] small'>Only show updates from Veritone</p>
                         </div>
@@ -178,12 +199,12 @@ export default function TwitterSlider({ data, onlyInternalPosts }) {
                     </div>
                 </div>
             </div>
-            <div className="sliderOuter max-w-[1600px] mx-auto">
-                <div className="sliderWrap">
-                    <Slider ref={sliderRef} {...settings}>
-                        {data?.map((slide, index) => (
+            <div className="sliderOuter  mx-auto">
+                <div className={`sliderWrap transition-opacity duration-300 ${checked == true ? 'opacity-[1]' : 'opacity-0'}`}>
+                    <Slider  {...settings}>
+                        {slidesData?.map((slide, index) => (
                             <div key={index}>
-                                <ImageTextCarousel {...slide} />
+                                <ImageTextCarousel {...slide} index={index}/>
                             </div>
                         ))}
                     </Slider>
